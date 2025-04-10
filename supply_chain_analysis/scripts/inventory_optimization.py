@@ -44,4 +44,25 @@ df['Holding Cost'] = df['Unit Cost'] * monthly_holding_rate
 df['Economic Order Quantity'] = np.sqrt((2 * (df['Number of products sold']/time_period) * order_cost) / df['Holding Cost'])
 
 
-print(df.head())
+inventory_df = df[[
+    'SKU',
+    'Availability',
+    'Number of products sold',
+    'Order quantities',
+    'Total Lead Time',
+    'Unit Manufacturing Cost',
+    'Unit Shipping Cost',
+    'Unit Cost',
+    'Sales Velocity',
+    'Safety Stock',
+    'Reorder Point',
+    'Holding Cost',
+    'Economic Order Quantity'
+]]
+
+inventory_df = inventory_df.rename(columns = {
+    'Availability': 'Current Stock',
+    'Number of products sold': 'Monthly Demand',
+})
+
+print(inventory_df.head())
