@@ -4,14 +4,14 @@ import numpy as np
 from supply_chain_analysis.scripts.inventory_optimization import inventory_df
 
 # Define date range (12 months)
-months = pd.date_range(start='2024-01-01', periods=12, freq='M')
+months = pd.date_range(start='2024-01-01', periods=12, freq='ME')
 
 # Establish synthetic demand rows
 synthetic_demand = []
 
-for _, row in inventory_df.itrrows():
+for _, row in inventory_df.iterrows():
     sku = row['SKU']
-    base_demand = row['number_of_products_sold']
+    base_demand = row['Monthly Demand']
 
     for month in months:
         # Simulate with 10% noise
@@ -25,4 +25,4 @@ for _, row in inventory_df.itrrows():
 # Create synthetic df
 synthetic_df = pd.DataFrame(synthetic_demand)
 
-synthetic_df.head()
+print(synthetic_df)
