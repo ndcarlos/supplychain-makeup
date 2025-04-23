@@ -8,10 +8,9 @@ from statsmodels.tsa.holtwinters import ExponentialSmoothing
 from supply_chain_analysis.scripts.inventory_optimization import inventory_df
 from supply_chain_analysis.scripts.inventory_optimization import inventory_summary
 
-synthetic_demand = pd.read_csv('supply_chain_analysis/data/processed/synthetic_monthly.csv')
+synthetic_demand = pd.read_csv('/Users/noahcarlos/Documents/Projects/Python/SCA_makeupstartup/supply_chain_analysis/data/processed/synthetic_monthly.csv')
 
-head(synthetic_demand)
-
+print(synthetic_demand.head)
 
 
 

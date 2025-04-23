@@ -95,8 +95,15 @@ inventory_summary['Days On Hand'] = inventory_summary['Current Stock'] / average
 # Adding EOQ column
 eoq_df = inventory_df[['SKU', 'Economic Order Quantity']]
 
+
+
 inventory_summary = inventory_summary.merge(eoq_df, on='SKU', how='left')
 inventory_summary['Order Quantity Difference'] = inventory_df['Order quantities'] - inventory_summary['Economic Order Quantity']
+
+# Creating overstocked/understocked classifier
+inventory_summary['Stock Status'] = np.where(inventory_summary['Current Stock'] > inventory_summary['Economic Order Quantity'], 'overstocked', 'understocked')
+
+print(inventory_summary)
 
 sns.barplot(data=inventory_summary.sort_values("Overstock Amount", ascending=False).head(10),
             x="Overstock Amount", y="SKU")
