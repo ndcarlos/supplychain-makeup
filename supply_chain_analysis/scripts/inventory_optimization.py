@@ -1,5 +1,8 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from scipy.stats import quantile_test
 
 df = pd.read_csv('/Users/noahcarlos/Documents/Projects/Python/SCA_makeupstartup/supply_chain_analysis/data/processed/cleaned_data.csv')
 
@@ -66,3 +69,39 @@ inventory_df = inventory_df.rename(columns = {
 })
 
 print(inventory_df.head())
+
+
+print(inventory_df.columns)
+
+# Compare current stock level demands
+inventory_df['Expected Need'] = inventory_df['Monthly Demand'] + inventory_df['Safety Stock']
+inventory_df['Overstock Amount'] = inventory_df['Current Stock'] - inventory_df['Expected Need']
+
+# Generate an inventory summary
+inventory_summary = inventory_df.groupby('SKU').agg({
+    "Monthly Demand":"sum",
+    "Order quantities":"mean",
+    "Current Stock":"mean",
+    "Overstock Amount":"mean"
+}).reset_index()
+
+# Find inventory turnover
+inventory_summary['Inventory Turnover'] = inventory_summary['Monthly Demand']/inventory_summary['Current Stock']
+
+# Days of inventory on hand
+average_daily_demand = inventory_summary['Monthly Demand'] / 30
+inventory_summary['Days On Hand'] = inventory_summary['Current Stock'] / average_daily_demand
+
+# Adding EOQ column
+eoq_df = inventory_df[['SKU', 'Economic Order Quantity']]
+
+inventory_summary = inventory_summary.merge(eoq_df, on='SKU', how='left')
+inventory_summary['Order Quantity Difference'] = inventory_df['Order quantities'] - inventory_summary['Economic Order Quantity']
+
+sns.barplot(data=inventory_summary.sort_values("Overstock Amount", ascending=False).head(10),
+            x="Overstock Amount", y="SKU")
+plt.title("Top 10 Overstocked SKUs")
+plt.xlabel("Average Overstock Amount")
+plt.ylabel("SKU")
+plt.tight_layout()
+plt.show()
