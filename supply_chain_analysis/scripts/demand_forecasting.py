@@ -7,12 +7,11 @@ from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 from supply_chain_analysis.scripts.inventory_optimization import inventory_df
 from supply_chain_analysis.scripts.inventory_optimization import inventory_summary
-from supply_chain_analysis.scripts.synthetic_data_generation import synthetic_df
 
-synthetic_demand = pd.read_csv('/Users/noahcarlos/Documents/Projects/Python/SCA_makeupstartup/supply_chain_analysis/data/processed/synthetic_monthly.csv')
+synthetic_df = pd.read_csv('/Users/noahcarlos/Documents/Projects/Python/SCA_makeupstartup/supply_chain_analysis/data/processed/synthetic_monthly.csv')
 
 # Selecting a representative set of skus
-sku_summary = synthetic_demand.groupby('SKU')['demand'].agg(
+sku_summary = synthetic_df.groupby('SKU')['demand'].agg(
     avg_demand='mean',
     std_demand='std',
     total_units_sold='sum'
@@ -29,11 +28,19 @@ sample_skus = list({steady_sku, high_demand_sku, low_demand_sku, erratic_sku, ov
 
 sample_df = synthetic_df[synthetic_df["SKU"].isin(sample_skus)]
 
-print("Steady SKU:", steady_sku)
-print("High Demand SKU:", high_demand_sku)
-print("Low Demand SKU:", low_demand_sku)
-print("Erratic SKU:", erratic_sku)
-print("Overstocked SKU:", overstocked_sku)
+
+# Set up facet grid to plot sample SKUs
+g = sns.FacetGrid(sample_df, col="SKU", col_wrap=3, height=4, sharey=False)
+g.map_dataframe(sns.lineplot, x="date", y="demand")
+
+# Add titles and formatting
+g.set_titles(col_template="SKU: {col_name}")
+g.set_axis_labels("Date", "Demand")
+for ax in g.axes.flat:
+    ax.tick_params(axis='x', rotation=45)
+
+plt.tight_layout()
+plt.show()
 
 
 # sku0_to_forecast = synthetic_df['SKU'].iloc[0]
