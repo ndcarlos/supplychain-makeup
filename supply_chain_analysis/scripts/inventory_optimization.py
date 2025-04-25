@@ -105,10 +105,14 @@ inventory_summary['Stock Status'] = np.where(inventory_summary['Current Stock'] 
 
 print(inventory_summary)
 
-sns.barplot(data=inventory_summary.sort_values("Overstock Amount", ascending=False).head(10),
-            x="Overstock Amount", y="SKU")
-plt.title("Top 10 Overstocked SKUs")
-plt.xlabel("Average Overstock Amount")
-plt.ylabel("SKU")
-plt.tight_layout()
-plt.show()
+#Plot of over/under stocked skus
+# sns.barplot(data=inventory_summary.sort_values("Overstock Amount", ascending=False).head(10),
+#             x="Overstock Amount", y="SKU")
+# plt.title("Top 10 Overstocked SKUs")
+# plt.xlabel("Average Overstock Amount")
+# plt.ylabel("SKU")
+# plt.tight_layout()
+# plt.show()
+
+
+
