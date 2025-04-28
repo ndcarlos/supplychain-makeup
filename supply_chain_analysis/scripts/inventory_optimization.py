@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import quantile_test
 
+sns.set_theme(style = 'whitegrid')
+
 df = pd.read_csv('/Users/noahcarlos/Documents/Projects/Python/SCA_makeupstartup/supply_chain_analysis/data/processed/cleaned_data.csv')
 
 # assume monthly time period (avg 30 days)
@@ -102,17 +104,24 @@ inventory_summary['Order Quantity Difference'] = inventory_df['Order quantities'
 
 # Creating overstocked/understocked classifier
 inventory_summary['Stock Status'] = np.where(inventory_summary['Current Stock'] > inventory_summary['Economic Order Quantity'], 'overstocked', 'understocked')
+plt_df = inventory_summary.sort_values("Overstock Amount", ascending=False).head(10)
+bar_colors = ['seagreen' if x > 0 else 'tomato' for x in plt_df["Overstock Amount"]]
 
-print(inventory_summary)
+# Plot of over/under stocked skus
+sns.barplot(data=plt_df,
+            x="Overstock Amount",
+            y="SKU",
+            legend=False,
+            dodge=False,
+            palette=bar_colors
+)
+plt.title("Top 10 Inventory Imbalances by SKU")
+plt.xlabel("Average Deviation from Optimal Stock")
+plt.ylabel("")
+plt.axvline(0, color='gray', linestyle='--')
+plt.xticks(ticks=range(-50, 60, 10))
+plt.tight_layout()
+plt.show()
 
-#Plot of over/under stocked skus
-# sns.barplot(data=inventory_summary.sort_values("Overstock Amount", ascending=False).head(10),
-#             x="Overstock Amount", y="SKU")
-# plt.title("Top 10 Overstocked SKUs")
-# plt.xlabel("Average Overstock Amount")
-# plt.ylabel("SKU")
-# plt.tight_layout()
-# plt.show()
 
-
-
+print(inventory_summary.head)
