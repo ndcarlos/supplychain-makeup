@@ -116,7 +116,7 @@ sns.barplot(data=plt_df,
             palette=bar_colors
 )
 plt.title("Top 10 Inventory Imbalances by SKU")
-plt.xlabel("Average Deviation from Optimal Stock")
+plt.xlabel("Average Unit Deviation from Optimal Stock")
 plt.ylabel("")
 plt.axvline(0, color='gray', linestyle='--')
 plt.xticks(ticks=range(-50, 60, 10))
