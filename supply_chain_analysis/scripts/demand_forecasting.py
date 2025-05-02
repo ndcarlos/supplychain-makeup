@@ -10,6 +10,13 @@ from supply_chain_analysis.scripts.inventory_optimization import inventory_summa
 
 synthetic_df = pd.read_csv('/Users/noahcarlos/Documents/Projects/Python/SCA_makeupstartup/supply_chain_analysis/data/processed/synthetic_monthly.csv')
 
+# Create a mapping from SKU to Lead Time
+lead_time_map = inventory_df.set_index('SKU')['Total Lead Time'].to_dict()
+
+# Add the column to synthetic_df
+synthetic_df['Total Lead Time'] = synthetic_df['SKU'].map(lead_time_map)
+
+
 # Selecting a representative set of skus
 sku_summary = synthetic_df.groupby('SKU')['demand'].agg(
     avg_demand='mean',
@@ -111,3 +118,5 @@ plt.show()
 # plt.legend()
 # plt.tight_layout()
 # plt.show()
+
+print(synthetic_df.head)

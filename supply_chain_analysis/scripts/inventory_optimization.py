@@ -124,4 +124,4 @@ plt.tight_layout()
 plt.show()
 
 
-print(inventory_summary.head)
+print(inventory_df.columns)
