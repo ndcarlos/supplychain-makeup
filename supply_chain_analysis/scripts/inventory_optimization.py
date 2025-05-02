@@ -70,10 +70,6 @@ inventory_df = inventory_df.rename(columns = {
     'Number of products sold': 'Monthly Demand',
 })
 
-print(inventory_df.head())
-
-
-print(inventory_df.columns)
 
 # Compare current stock level demands
 inventory_df['Expected Need'] = inventory_df['Monthly Demand'] + inventory_df['Safety Stock']
@@ -124,4 +120,3 @@ plt.tight_layout()
 plt.show()
 
 
-print(inventory_df.columns)

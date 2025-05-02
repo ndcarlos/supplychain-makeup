@@ -41,7 +41,7 @@ g = sns.FacetGrid(sample_df, col="SKU", col_wrap=3, height=4, sharey=False)
 g.map_dataframe(sns.lineplot, x="date", y="demand")
 
 # Add titles and formatting
-g.set_titles(col_template="SKU: {col_name}")
+g.set_titles(col_template="{col_name}")
 g.set_axis_labels("Date", "Demand")
 for ax in g.axes.flat:
     ax.tick_params(axis='x', rotation=45)
@@ -119,4 +119,3 @@ plt.show()
 # plt.tight_layout()
 # plt.show()
 
-print(synthetic_df.head)
