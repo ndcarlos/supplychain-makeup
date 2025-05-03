@@ -1,7 +1,7 @@
 
 # Supply Chain Analysis for a Makeup Startup
 
-This repository contains various files, scripts, and applications I created using [a Kaggle dataset](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis) collected from a Fashion and Beauty startup.
+This repository contains various files, scripts, and applications I created to be used with [a Kaggle dataset](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis) collected from a Fashion and Beauty startup.
 ## Table of Contents
 
 *   🙋 [What is covered in this README?](#what-is-covered-in-this-readme)
