@@ -10,6 +10,7 @@ supplychain-makeup/
 ├── data_processing.py # Script for cleaning and preparing the raw data
 ├── supply_chain_analysis/ # Folder with all analysis scripts and models
 └── README.md # You're here!
+```
 
 ## 🚀 Whats Inside
 - [supply_chain_data.csv](https://github.com/ndcarlos/supplychain-makeup/blob/main/supply_chain_data.csv) : Raw transaction and inventory data.
