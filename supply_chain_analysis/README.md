@@ -12,8 +12,7 @@ Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 
 *   🙋 [Project Overview](#project-overview)
 *   📝 [Scripts](#scripts)
-
-*   🌐 [Global Dependencies](#global-dependencies)
+*   🌐 [Dependencies](#dependencies)
    *   📚 [Libraries](#libraries)
 *   ⏬ [Install](#install)
 *   🔮 [Future plans](#future-plans)
@@ -37,7 +36,7 @@ This repository aims to showcase real-world supply chain analytics workflows, in
   * ```bottleneck_analysis.py```: *(Planned)* Will analyze process bottlenecks causing supply delays.
   * ```supplier_analysis.py```: *(Planned)* Will assess supplier performance and lead times.
 
-## 🌐 Global dependencies
+## 🌐 Dependencies
 _Note: local dependencies for each script are specified in the script headers_
   * ### 📚 Libraries
     This project uses the following core Python libraries:
@@ -47,27 +46,35 @@ _Note: local dependencies for each script are specified in the script headers_
       * ```seaborn```
       * ```scikit-learn``` (for synthetic data generation and modeling)
 
-Make sure to install them using the provided requirements file or individually.
+    Install with pip
+    ```bash
+    pip install pandas numpy matplotlib seaborn scikit-learn statsmodels
+    ```
+
 
 ## ⏬ Install
-Clone this repository to your local machine:
+Clone this repository to your local machine and navigate to the analysis folder:
 
 ```bash
 git clone https://github.com/ndcarlos/supplychain-makeup
-cd supplychain-makeup
+cd supplychain-makeup/supply_chain_analysis
 ```
 
-Install dependencies using ```pip```:
+Run scripts like:
 
-``` pip install -r requirements.txt ```
+```bash
+python inventory_optimization.py
+```
 
 
 ## 🔮 Future Plans
+  * 🔄 Complete bottleneck and supplier analysis
+  * 📈 Add dashboards using ```streamlit``` or ```plotly```
+  * 📦 Package into a reusable Python module
+
 
 ## 🤝 Contribute
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+Pull requests are welcome! Open an issue first to discuss major changes.
 
 ## ©️ License
 [MIT](https://choosealicense.com/licenses/mit/)
@@ -86,5 +93,3 @@ Please make sure to update tests as appropriate.
 [blog-post-templates]: https://backlinko.com/hub/content/blog-post-templates "Backlinko blog post templates"
 [about-markdown]: https://www.markdownguide.org/getting-started/ "Introduction to markdown"
 [markdown-cheatsheet]: https://www.markdownguide.org/cheat-sheet/ "Markdown Cheat Sheet"
-
->>>>>>> d46ed75aff37d176b88889cda74f9a5aaf22aab5
