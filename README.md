@@ -48,15 +48,16 @@ cd supplychain-makeup
 
 Install dependencies using ```pip```:
 
-``` bash pip install -r requirements.txt ```
+``` pip install -r requirements.txt ```
 
 
 ## 🗂️ Repository Contents
-Files denoted with 🏗️ are not yet complete.
+Files marked with 🏗️ are in progress.
 
    * ### 📊 Projects
      (each contained in their folder)
-      * 🏗️ [`supply_chain_analysis`](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis)
+      * 🏗️ [`supply_chain_analysis`](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis):
+        Scripts for inventory optimization, demand forecasting, and replenishment planning.
 
 ## 🔮 Future Plans
 
