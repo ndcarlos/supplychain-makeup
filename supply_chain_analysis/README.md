@@ -21,6 +21,7 @@ Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 *   🔌 [Sources](#sources)
 
 ## 🙋 Project Overview
+
 This repository aims to showcase real-world supply chain analytics workflows, including:
 
 * 📦 **Inventory Optimization**: Analyzing stock imbalances, calculating ideal stock levels, and optimizing reorder points to minimize carrying costs.
@@ -29,6 +30,7 @@ This repository aims to showcase real-world supply chain analytics workflows, in
 * 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
 
 ## 📝 Scripts
+
   * ```inventory_optimization.py```: Analyzes stock levels, and highlights overstocked and understocked SKUs.
   * ```demand_forecasting.py```: Generates synthetic demand data and forecasts future stock needs.
   * ```replenishment_plan.py```: Calculates reorder points (ROP) and recommended reorder quantities.
@@ -37,8 +39,10 @@ This repository aims to showcase real-world supply chain analytics workflows, in
   * ```supplier_analysis.py```: *(Planned)* Will assess supplier performance and lead times.
 
 ## 🌐 Dependencies
+
 _Note: local dependencies for each script are specified in the script headers_
   * ### 📚 Libraries
+    
     This project uses the following core Python libraries:
       * ```pandas```
       * ```numpy```
@@ -53,6 +57,7 @@ _Note: local dependencies for each script are specified in the script headers_
 
 
 ## ⏬ Install
+
 Clone this repository to your local machine and navigate to the analysis folder:
 
 ```bash
@@ -68,15 +73,18 @@ python inventory_optimization.py
 
 
 ## 🔮 Future Plans
+
   * 🔄 Complete bottleneck and supplier analysis
   * 📈 Add dashboards using ```streamlit``` or ```plotly```
   * 📦 Package into a reusable Python module
 
 
 ## 🤝 Contribute
+
 Pull requests are welcome! Open an issue first to discuss major changes.
 
 ## ©️ License
+
 [MIT](https://choosealicense.com/licenses/mit/)
 
 ## 🔌 Sources
