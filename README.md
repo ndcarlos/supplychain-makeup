@@ -18,7 +18,7 @@ Built on top of [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 *   ©️ [License](#license)
 *   🔌 [Sources](#sources)
 
-## Overview
+## 🙋 Overview
 This repository aims to showcase real-world supply chain analytics workflows, including:
 
 * 📦 **Inventory Optimization**: Analyzing stock imbalances, calculating ideal stock levels, and optimizing reorder points to minimize carrying costs.
@@ -26,9 +26,9 @@ This repository aims to showcase real-world supply chain analytics workflows, in
 * 🔁 **Replenishment Planning**: Creating SKU-level reorder plans that account for lead times, demand variability, and service level targets.
 * 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
 
-## Global dependencies
+## 🌐 Global dependencies
 _Note: local dependencies for each script are specified in the script headers_
-   * ### Libraries
+   * ### 📚 Libraries
 This project uses the following core Python libraries:
 * ```pandas```
 * ```numpy```
@@ -38,38 +38,38 @@ This project uses the following core Python libraries:
 
 Make sure to install them using the provided requirements file or individually.
 
-## Install
+## ⏬ Install
 Clone this repository to your local machine:
 
-```
+<pre>```
 git clone https://github.com/ndcarlos/supplychain-makeup
 cd supplychain-makeup
-```
+```</pre>
 
 Install dependencies using ```pip```:
 
-```
+<pre>```
 pip install -r requirements.txt
-```
+```</pre>
 
-## Contents
+## 🗂️ Repository Contents
 Files denoted with 🏗️ are not yet complete.
 
-   * ### Projects
+   * ### 📊 Projects
      (each contained in their folder)
       * 🏗️ [`supply_chain_analysis`](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis)
 
-## Future Plans
+## 🔮 Future Plans
 
-## Contribute
+## 🤝 Contribute
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## License
+## ©️ License
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Sources
+## 🔌 Sources
 
 [react-markdown][react-markdown] - Project which served as an inspiration for this README
 
