@@ -1,5 +1,5 @@
 
-#📦 Supply Chain Optimization for a Makeup Startup
+# 📦 Supply Chain Optimization for a Makeup Startup
 
 This repository contains Python scripts and analyses focused on optimizing inventory levels, forecasting demand, and improving replenishment planning — using data modeled after operations at a Fashion & Beauty startup.
 
@@ -21,10 +21,10 @@ Built on top of [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 ## Overview
 This repository aims to showcase real-world supply chain analytics workflows, including:
 
-* 📦 Inventory Optimization: Analyzing stock imbalances, calculating ideal stock levels, and optimizing reorder points to minimize carrying costs.
-* 🔮 Demand Forecasting: Generating synthetic data to model annual demand trends and predict future stock needs more accurately.
-* 🔁 Replenishment Planning: Creating SKU-level reorder plans that account for lead times, demand variability, and service level targets.
-* 🔍 Key goal: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
+* 📦 **Inventory Optimization**: Analyzing stock imbalances, calculating ideal stock levels, and optimizing reorder points to minimize carrying costs.
+* 🔮 **Demand Forecasting**: Generating synthetic data to model annual demand trends and predict future stock needs more accurately.
+* 🔁 **Replenishment Planning**: Creating SKU-level reorder plans that account for lead times, demand variability, and service level targets.
+* 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
 
 ## Global dependencies
 _Note: local dependencies for folders within this repository will be detailed in their respective READMEs_
