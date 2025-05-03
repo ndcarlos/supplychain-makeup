@@ -12,7 +12,7 @@ supplychain-makeup/
 └── README.md # You're here!
 ```
 
-## 🚀 Whats Inside
+## 🚀 What's Inside
 - [supply_chain_data.csv](https://github.com/ndcarlos/supplychain-makeup/blob/main/supply_chain_data.csv) : Raw transaction and inventory data.
 - [data_processing.py](https://github.com/ndcarlos/supplychain-makeup/blob/main/data_processing.py) : Cleans and reshapes the raw data to prepare it for analysis.
 - [supply_chain_analysis/](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis) : Contains scripts and models for inventory optimization, demand forecasting, and replenishment planning.
