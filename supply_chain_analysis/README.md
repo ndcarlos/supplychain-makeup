@@ -29,15 +29,23 @@ This repository aims to showcase real-world supply chain analytics workflows, in
 * 🔁 **Replenishment Planning**: Creating SKU-level reorder plans that account for lead times, demand variability, and service level targets.
 * 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
 
+## 📝 Scripts
+  * ```inventory_optimization.py```: Analyzes stock levels, and highlights overstocked and understocked SKUs.
+  * ```demand_forecasting.py```: Generates synthetic demand data and forecasts future stock needs.
+  * ```replenishment_plan.py```: Calculates reorder points (ROP) and recommended reorder quantities.
+  * ```synthetic_data_generation.py```: Generates a year-long synthetic dataset to support demand forecasting and inventory analysis.
+  * ```bottleneck_analysis.py```: *(Planned)* Will analyze process bottlenecks causing supply delays.
+  * ```supplier_analysis.py```: *(Planned)* Will assess supplier performance and lead times.
+
 ## 🌐 Global dependencies
 _Note: local dependencies for each script are specified in the script headers_
-   * ### 📚 Libraries
-This project uses the following core Python libraries:
-* ```pandas```
-* ```numpy```
-* ```matplotlib```
-* ```seaborn```
-* ```scikit-learn``` (for synthetic data generation and modeling)
+  * ### 📚 Libraries
+    This project uses the following core Python libraries:
+      * ```pandas```
+      * ```numpy```
+      * ```matplotlib```
+      * ```seaborn```
+      * ```scikit-learn``` (for synthetic data generation and modeling)
 
 Make sure to install them using the provided requirements file or individually.
 
