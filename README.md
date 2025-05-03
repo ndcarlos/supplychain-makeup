@@ -4,6 +4,7 @@
 This repository contains my project on inventory optimization and demand forecasting for a Fashion & Beauty startup. Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis), I explored strategies to minimize excess stock, reduce costs, and improve demand planning.
 
 ## 📂 Repository Structure
+```plaintext
 supplychain-makeup/
 ├── supply_chain_data.csv # Raw dataset from Kaggle
 ├── data_processing.py # Script for cleaning and preparing the raw data
