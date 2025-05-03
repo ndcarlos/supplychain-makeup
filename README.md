@@ -27,9 +27,11 @@ This repository aims to showcase real-world supply chain analytics workflows, in
 * 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
 
 ## Global dependencies
-_Note: local dependencies for folders within this repository will be detailed in their respective READMEs_
+_Note: local dependencies for each script are specified in the script headers_
    * ### Libraries
-
+This project uses the following core Python libraries:
+* ```pandas```
+* 
 
 ## Install
 Use git to clone this repository into your computer.
