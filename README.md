@@ -44,7 +44,7 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/ndcarlos/supplychain-makeup
 cd supplychain-makeup
-
+```
 
 Install dependencies using ```pip```:
 
