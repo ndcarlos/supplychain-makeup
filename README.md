@@ -26,7 +26,7 @@ cd supplychain-makeup
 ```
 
 ## 🔍 For Full Analysis Details
-Go to the ```[supply_chain_analysis](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis)``` folder for:
+Go to the [supply_chain_analysis](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis) folder for:
  * Script breakdowns
  * Running instructions
  * Methodology details
