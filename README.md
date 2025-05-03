@@ -1,70 +1,33 @@
 
-# 📦 Supply Chain Optimization for a Makeup Startup
+# Supply Chain Analysis for a Makeup Startup
 
-This repository contains Python scripts and analyses focused on optimizing inventory levels, forecasting demand, and improving replenishment planning — using data modeled after operations at a Fashion & Beauty startup.
+This repository contains my project on inventory optimization and demand forecasting for a Fashion & Beauty startup. Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis), I explored strategies to minimize excess stock, reduce costs, and improve demand planning.
 
-Built on top of [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis) , the project simulates a year’s worth of operations through synthetic data generation and data-driven inventory strategies.
-## Table of Contents
+## 📂 Repository Structure
+supplychain-makeup/
+├── supply_chain_data.csv # Raw dataset from Kaggle
+├── data_processing.py # Script for cleaning and preparing the raw data
+├── supply_chain_analysis/ # Folder with all analysis scripts and models
+└── README.md # You're here!
 
-*   🙋 [Overview](#overview)
-*   🌐 [Global Dependencies](#global-dependencies)
-   *   📚 [Libraries](#libraries)
-*   ⏬ [Install](#install)
-*   🗂️ [Repository Contents](#repository-contents)
-   *   📊 [Projects](#projects)
-   *   📝 [Scripts](#scripts)
-*   🔮 [Future plans](#future-plans)
-*   🤝 [Contribute](#contribute)
-*   ©️ [License](#license)
-*   🔌 [Sources](#sources)
+## 🚀 Whats Inside
+- [supply_chain_data.csv](https://github.com/ndcarlos/supplychain-makeup/blob/main/supply_chain_data.csv) : Raw transaction and inventory data.
+- [data_processing.py](https://github.com/ndcarlos/supplychain-makeup/blob/main/data_processing.py) : Cleans and reshapes the raw data to prepare it for analysis.
+- [supply_chain_analysis/](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis) : Contains scripts and models for inventory optimization, demand forecasting, and replenishment planning.
 
-## 🙋 Overview
-This repository aims to showcase real-world supply chain analytics workflows, including:
-
-* 📦 **Inventory Optimization**: Analyzing stock imbalances, calculating ideal stock levels, and optimizing reorder points to minimize carrying costs.
-* 🔮 **Demand Forecasting**: Generating synthetic data to model annual demand trends and predict future stock needs more accurately.
-* 🔁 **Replenishment Planning**: Creating SKU-level reorder plans that account for lead times, demand variability, and service level targets.
-* 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
-
-## 🌐 Global dependencies
-_Note: local dependencies for each script are specified in the script headers_
-   * ### 📚 Libraries
-This project uses the following core Python libraries:
-* ```pandas```
-* ```numpy```
-* ```matplotlib```
-* ```seaborn```
-* ```scikit-learn``` (for synthetic data generation and modeling)
-
-Make sure to install them using the provided requirements file or individually.
-
-## ⏬ Install
-Clone this repository to your local machine:
+## ⏬ Installation
+Clone this repository:
 
 ```bash
 git clone https://github.com/ndcarlos/supplychain-makeup
 cd supplychain-makeup
 ```
 
-Install dependencies using ```pip```:
-
-``` pip install -r requirements.txt ```
-
-
-## 🗂️ Repository Contents
-Files marked with 🏗️ are in progress.
-
-   * ### 📊 Projects
-     (each contained in their folder)
-      * 🏗️ [`supply_chain_analysis`](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis):
-        Scripts for inventory optimization, demand forecasting, and replenishment planning.
-
-## 🔮 Future Plans
-
-## 🤝 Contribute
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+## 🔍 For Full Analysis Details
+Go to the ```[supply_chain_analysis](https://github.com/ndcarlos/supplychain-makeup/tree/main/supply_chain_analysis)``` folder for:
+ * Script breakdowns
+ * Running instructions
+ * Methodology details
 
 ## ©️ License
 [MIT](https://choosealicense.com/licenses/mit/)
