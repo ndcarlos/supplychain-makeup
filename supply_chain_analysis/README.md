@@ -13,7 +13,7 @@ Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 *   🙋 [Project Overview](#project-overview)
 *   📝 [Scripts](#scripts)
 *   🌐 [Dependencies](#dependencies)
-   *   📚 [Libraries](#libraries)
+     *   📚 [Libraries](#libraries)
 *   ⏬ [Install](#install)
 *   🔮 [Future plans](#future-plans)
 *   🤝 [Contribute](#contribute)
