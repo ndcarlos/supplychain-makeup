@@ -31,13 +31,25 @@ _Note: local dependencies for each script are specified in the script headers_
    * ### Libraries
 This project uses the following core Python libraries:
 * ```pandas```
-* 
+* ```numpy```
+* ```matplotlib```
+* ```seaborn```
+* ```scikit-learn``` (for synthetic data generation and modeling)
+
+Make sure to install them using the provided requirements file or individually.
 
 ## Install
-Use git to clone this repository into your computer.
+Clone this repository to your local machine:
 
 ```
 git clone https://github.com/ndcarlos/supplychain-makeup
+cd supplychain-makeup
+```
+
+Install dependencies using ```pip```:
+
+```
+pip install -r requirements.txt
 ```
 
 ## Contents
