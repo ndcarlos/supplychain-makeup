@@ -48,5 +48,3 @@ Go to the [supply_chain_analysis](https://github.com/ndcarlos/supplychain-makeup
 [blog-post-templates]: https://backlinko.com/hub/content/blog-post-templates "Backlinko blog post templates"
 [about-markdown]: https://www.markdownguide.org/getting-started/ "Introduction to markdown"
 [markdown-cheatsheet]: https://www.markdownguide.org/cheat-sheet/ "Markdown Cheat Sheet"
-
->>>>>>> d46ed75aff37d176b88889cda74f9a5aaf22aab5
