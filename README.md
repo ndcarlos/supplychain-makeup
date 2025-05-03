@@ -41,16 +41,16 @@ Make sure to install them using the provided requirements file or individually.
 ## ⏬ Install
 Clone this repository to your local machine:
 
-<pre>``` bash
+``` bash
 git clone https://github.com/ndcarlos/supplychain-makeup
 cd supplychain-makeup```
-</pre>
+
 
 Install dependencies using ```pip```:
 
-<pre>``` bash
+``` bash
 pip install -r requirements.txt```
-</pre>
+
 
 ## 🗂️ Repository Contents
 Files denoted with 🏗️ are not yet complete.
