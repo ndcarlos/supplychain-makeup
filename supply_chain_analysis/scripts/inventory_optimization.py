@@ -104,19 +104,19 @@ plt_df = inventory_summary.sort_values("Overstock Amount", ascending=False).head
 bar_colors = ['seagreen' if x > 0 else 'tomato' for x in plt_df["Overstock Amount"]]
 
 # Plot of over/under stocked skus
-sns.barplot(data=plt_df,
-            x="Overstock Amount",
-            y="SKU",
-            legend=False,
-            dodge=False,
-            palette=bar_colors
-)
-plt.title("Top 10 Inventory Imbalances by SKU")
-plt.xlabel("Average Unit Deviation from Optimal Stock")
-plt.ylabel("")
-plt.axvline(0, color='gray', linestyle='--')
-plt.xticks(ticks=range(-50, 60, 10))
-plt.tight_layout()
-plt.show()
+# sns.barplot(data=plt_df,
+#             x="Overstock Amount",
+#             y="SKU",
+#             legend=False,
+#             dodge=False,
+#             palette=bar_colors
+# )
+# plt.title("Top 10 Inventory Imbalances by SKU")
+# plt.xlabel("Average Unit Deviation from Optimal Stock")
+# plt.ylabel("")
+# plt.axvline(0, color='gray', linestyle='--')
+# plt.xticks(ticks=range(-50, 60, 10))
+# plt.tight_layout()
+# plt.show()
 
 

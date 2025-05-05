@@ -1,5 +1,7 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from supply_chain_analysis.scripts.demand_forecasting import synthetic_df
 from supply_chain_analysis.scripts.inventory_optimization import inventory_df
@@ -40,7 +42,32 @@ def generate_replenishment_plan(synthetic_df, inventory_df, z_score=1.65):
 
 replenishment_plan = generate_replenishment_plan(synthetic_df, inventory_df)
 
-print(replenishment_plan[[
-    'Reorder Qty', 'ROP'
-]])
+# Select top 10 SKUs with largest reorder qty
+top_replenish = replenishment_plan.sort_values(by='Reorder Qty', ascending=False).head(10)
+
+# Create "after replenishment" stock level
+top_replenish['Recommended Stock Level'] = top_replenish['ROP'] + top_replenish['Reorder Qty']
+
+# Melt dataframe for plotting
+plot_df = top_replenish.melt(
+    id_vars='SKU',
+    value_vars=['Current Stock', 'Recommended Stock Level'],
+    var_name='Stock Type',
+    value_name='Units'
+)
+
+# Plot
+plt.figure(figsize=(12, 6))
+sns.barplot(data=plot_df, x='SKU', y='Units', hue='Stock Type', palette='Blues')
+
+plt.title('Inventory Levels: Before vs After Replenishment')
+plt.xlabel('SKU')
+plt.ylabel('Units in Stock')
+plt.xticks(rotation=45)
+plt.legend(title='')
+
+plt.tight_layout()
+plt.show()
+
+
 
