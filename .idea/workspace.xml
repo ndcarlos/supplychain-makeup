@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec318875-cd25-41fd-ba1a-4d3c3f80552d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supply_chain_analysis/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/supply_chain_analysis/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supply_chain_data.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/supply_chain_analysis/scripts/replenishment_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/supply_chain_analysis/scripts/replenishment_plan.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/supply_chain_analysis/scripts/supplier_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/supply_chain_analysis/scripts/supplier_analysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +52,11 @@
     "Python.inventory_optimization.executor": "Run",
     "Python.replenishment_plan.executor": "Run",
     "Python.scratch_1.executor": "Run",
+    "Python.supplier_analysis.executor": "Run",
     "Python.synthetic_data_monthly.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging main"
+    "git-widget-placeholder": "main"
   },
   "keyToStringList": {
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
@@ -66,7 +64,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.replenishment_plan">
+  <component name="RunManager" selected="Python.supplier_analysis">
     <configuration name="demand_forecasting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SCA_makeupstartup" />
       <option name="ENV_FILES" value="" />
@@ -155,7 +153,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="synthetic_data_monthly" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="supplier_analysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SCA_makeupstartup" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,7 +166,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/supply_chain_analysis/scripts/synthetic_data_monthly.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/supply_chain_analysis/scripts/supplier_analysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.supplier_analysis" />
         <item itemvalue="Python.replenishment_plan" />
         <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.demand_forecasting" />
         <item itemvalue="Python.inventory_optimization" />
-        <item itemvalue="Python.synthetic_data_monthly" />
       </list>
     </recent_temporary>
   </component>
