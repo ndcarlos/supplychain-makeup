@@ -26,22 +26,85 @@ print(supply_risk_df.columns)
 # Plot Supply Risk Matrix
 plt.figure(figsize=(12, 8))
 scatter = sns.scatterplot(
-    data=supply_risk_df,
-    x='Total Lead Time',
+    data=supply_risk_df,  # full dataset here
+    x='Lead Time Variability',
     y='mean',
     size='Current Stock',
-    hue='Lead Time Variability',
-    palette='Reds',
+    color='blue',  # single color since we're not using hue anymore
     sizes=(50, 500),
     alpha=0.7,
     edgecolor='black',
     linewidth=0.5
 )
 
-plt.title('Supply Risk Matrix: Lead Time vs Demand', fontsize=16)
-plt.xlabel('Average Lead Time (days)')
+plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
+plt.xlabel('Lead Time Variability (days)')
 plt.ylabel('Average Monthly Demand (units)')
-plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0., title='Lead Time Variability (days)')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+# Calculate medians
+x_median = supply_risk_df['Lead Time Variability'].median()
+y_median = supply_risk_df['mean'].median()
+
+plt.figure(figsize=(12, 8))
+scatter = sns.scatterplot(
+    data=supply_risk_df,
+    x='Lead Time Variability',
+    y='mean',
+    size='Current Stock',
+    color='tomato',
+    sizes=(50, 500),
+    alpha=0.7,
+    edgecolor='black',
+    linewidth=0.5
+)
+
+# Add quadrant lines
+plt.axvline(x=x_median, color='gray', linestyle='--', linewidth=1)
+plt.axhline(y=y_median, color='gray', linestyle='--', linewidth=1)
+
+plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
+plt.xlabel('Lead Time Variability (days)')
+plt.ylabel('Average Monthly Demand (units)')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+
+
+
+# Calculate thresholds
+variability_threshold = supply_risk_df['Lead Time Variability'].quantile(0.7)  # top 30%
+stock_threshold = supply_risk_df['Current Stock'].quantile(0.3)  # bottom 30%
+
+# Filter the DataFrame
+critical_df = supply_risk_df[
+    (supply_risk_df['Lead Time Variability'] >= variability_threshold) &
+    (supply_risk_df['Current Stock'] <= stock_threshold)
+]
+
+# Print number of critical SKUs
+print(f"Number of critical SKUs: {len(critical_df)}")
+
+
+plt.figure(figsize=(12, 8))
+scatter = sns.scatterplot(
+    data=critical_df,  # or supply_risk_df for full view
+    x='Lead Time Variability',
+    y='mean',
+    size='Current Stock',
+    color='blue',  # single color now that hue is removed
+    sizes=(50, 500),
+    alpha=0.7,
+    edgecolor='black',
+    linewidth=0.5
+)
+
+plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
+plt.xlabel('Lead Time Variability (days)')
+plt.ylabel('Average Monthly Demand (units)')
+plt.grid(True)
+plt.tight_layout()
+plt.show()
+

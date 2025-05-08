@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec318875-cd25-41fd-ba1a-4d3c3f80552d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/supply_chain_analysis/scripts/replenishment_plan.py" beforeDir="false" afterPath="$PROJECT_DIR$/supply_chain_analysis/scripts/replenishment_plan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/supply_chain_analysis/scripts/supplier_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/supply_chain_analysis/scripts/supplier_analysis.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,25 +44,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.data_processing.executor": "Run",
-    "Python.demand_forecasting.executor": "Run",
-    "Python.inventory_optimization.executor": "Run",
-    "Python.replenishment_plan.executor": "Run",
-    "Python.scratch_1.executor": "Run",
-    "Python.supplier_analysis.executor": "Run",
-    "Python.synthetic_data_monthly.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.data_processing.executor&quot;: &quot;Run&quot;,
+    &quot;Python.demand_forecasting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.inventory_optimization.executor&quot;: &quot;Run&quot;,
+    &quot;Python.replenishment_plan.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch_1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.supplier_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.synthetic_data_monthly.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.supplier_analysis">
     <configuration name="demand_forecasting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SCA_makeupstartup" />
