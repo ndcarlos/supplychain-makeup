@@ -101,6 +101,8 @@ scatter = sns.scatterplot(
     linewidth=0.5
 )
 
+# Add quadrant lines
+
 plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
 plt.xlabel('Lead Time Variability (days)')
 plt.ylabel('Average Monthly Demand (units)')
