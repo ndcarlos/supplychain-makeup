@@ -178,9 +178,9 @@
       <list>
         <item itemvalue="Python.supplier_analysis" />
         <item itemvalue="Python.replenishment_plan" />
-        <item itemvalue="Python.scratch_1" />
         <item itemvalue="Python.demand_forecasting" />
         <item itemvalue="Python.inventory_optimization" />
+        <item itemvalue="Python.scratch_1" />
       </list>
     </recent_temporary>
   </component>

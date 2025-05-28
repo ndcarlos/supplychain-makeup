@@ -21,29 +21,6 @@ supply_risk_df = pd.merge(demand_summary, lead_time_variability, on='SKU', how='
 supply_risk_df = supply_risk_df.drop(columns=['Lead Time Variability_y'])
 supply_risk_df = supply_risk_df.rename(columns={'Lead Time Variability_x' : 'Lead Time Variability'})
 
-print(supply_risk_df.columns)
-
-# Plot Supply Risk Matrix
-plt.figure(figsize=(12, 8))
-scatter = sns.scatterplot(
-    data=supply_risk_df,  # full dataset here
-    x='Lead Time Variability',
-    y='mean',
-    size='Current Stock',
-    color='blue',  # single color since we're not using hue anymore
-    sizes=(50, 500),
-    alpha=0.7,
-    edgecolor='black',
-    linewidth=0.5
-)
-
-plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
-plt.xlabel('Lead Time Variability (days)')
-plt.ylabel('Average Monthly Demand (units)')
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-
 # Calculate medians
 x_median = supply_risk_df['Lead Time Variability'].median()
 y_median = supply_risk_df['mean'].median()
@@ -84,6 +61,11 @@ critical_df = supply_risk_df[
     (supply_risk_df['Current Stock'] <= stock_threshold)
 ]
 
+# Calculate medians
+x_median = critical_df['Lead Time Variability'].median()
+y_median = critical_df['mean'].median()
+
+
 # Print number of critical SKUs
 print(f"Number of critical SKUs: {len(critical_df)}")
 
@@ -101,7 +83,9 @@ scatter = sns.scatterplot(
     linewidth=0.5
 )
 
-# Add quadrant lines
+# Plot median lines
+plt.axvline(x=x_median, color='gray', linestyle='--', linewidth=1)
+plt.axhline(y=y_median, color='gray', linestyle='--', linewidth=1)
 
 plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
 plt.xlabel('Lead Time Variability (days)')
