@@ -52,8 +52,8 @@ plt.show()
 
 
 # Calculate thresholds
-variability_threshold = supply_risk_df['Lead Time Variability'].quantile(0.7)  # top 30%
-stock_threshold = supply_risk_df['Current Stock'].quantile(0.3)  # bottom 30%
+variability_threshold = supply_risk_df['Lead Time Variability'].quantile(0.5)  # top 50%
+stock_threshold = supply_risk_df['Current Stock'].quantile(0.5)  # bottom 50%
 
 # Filter the DataFrame
 critical_df = supply_risk_df[
