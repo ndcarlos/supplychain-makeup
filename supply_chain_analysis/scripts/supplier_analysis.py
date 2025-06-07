@@ -51,34 +51,35 @@ plt.show()
 
 
 
-# Calculate thresholds
-variability_threshold = supply_risk_df['Lead Time Variability'].quantile(0.5)  # top 50%
-stock_threshold = supply_risk_df['Current Stock'].quantile(0.5)  # bottom 50%
 
-# Filter the DataFrame
+
+
+
+lead_time_median = supply_risk_df['Lead Time Variability'].median()
+sales_median = supply_risk_df['mean'].median()
+
 critical_df = supply_risk_df[
-    (supply_risk_df['Lead Time Variability'] >= variability_threshold) &
-    (supply_risk_df['Current Stock'] <= stock_threshold)
+    (supply_risk_df['Lead Time Variability'] > lead_time_median) &
+    (supply_risk_df['mean'] > sales_median)
 ]
 
-# Calculate medians
-x_median = critical_df['Lead Time Variability'].median()
-y_median = critical_df['mean'].median()
+low_demand_low_risk_df = supply_risk_df[
+    (supply_risk_df['Lead Time Variability'] < lead_time_median) &
+    (supply_risk_df['mean'] < sales_median)
+]
 
-
-# Print number of critical SKUs
-print(f"Number of critical SKUs: {len(critical_df)}")
+critical_and_low_risk = pd.concat([critical_df, low_demand_low_risk_df], ignore_index = True)
 
 
 plt.figure(figsize=(12, 8))
 scatter = sns.scatterplot(
-    data=critical_df,  # or supply_risk_df for full view
+    data=critical_and_low_risk,  # or supply_risk_df for full view
     x='Lead Time Variability',
     y='mean',
-    size='Current Stock',
-    color='blue',  # single color now that hue is removed
-    sizes=(50, 500),
-    alpha=0.7,
+    hue='Current Stock',
+    palette='viridis',
+    s=200,
+    alpha=0.8,
     edgecolor='black',
     linewidth=0.5
 )
@@ -91,6 +92,7 @@ plt.title('Supply Risk Matrix: Variability vs Demand', fontsize=16)
 plt.xlabel('Lead Time Variability (days)')
 plt.ylabel('Average Monthly Demand (units)')
 plt.grid(True)
+plt.legend(title='Current Stock', bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.tight_layout()
 plt.show()
 
