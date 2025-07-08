@@ -1,12 +1,17 @@
 # 📦 Supply Chain Analysis: Inventory Optimization & Demand Forecasting
 
+![Sample Supply Risk Matrix](outputs/figures/supplyrisk_scmc.png)
+📌 _Sample output: Supply Risk Matrix identifying critical SKUs at risk of stockouts or overstocking._
+
+&nbsp;
+
 This folder contains Python scripts and models created to optimize inventory levels and forecast demand for a Fashion & Beauty startup.
 
 Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh2209/supply-chain-analysis) I worked through several stages:
 * Inventory health checks
 * Demand forecasting (with synthetic data generation)
 * Replenishment planning
-* Bottleneck and supplier analysis (in progress)
+* Bottleneck and supplier analysis
 
 ## Table of Contents
 
@@ -15,7 +20,7 @@ Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 *   🌐 [Dependencies](#dependencies)
      *   📚 [Libraries](#libraries)
 *   ⏬ [Install](#install)
-*   🔮 [Future plans](#future-plans)
+*   🔮 [Possible Extensions](#possible-extensions)
 *   🤝 [Contribute](#contribute)
 *   ©️ [License](#license)
 *   🔌 [Sources](#sources)
@@ -25,18 +30,19 @@ Using data from [this Kaggle dataset](https://www.kaggle.com/datasets/harshsingh
 This repository aims to showcase real-world supply chain analytics workflows, including:
 
 * 📦 **Inventory Optimization**: Analyzing stock imbalances, calculating ideal stock levels, and optimizing reorder points to minimize carrying costs.
+    * 📊 Supply Risk Matrix: Visualizes SKUs by average demand, lead time variability, and current stock to identify those most vulnerable to stockouts or overstocking.
 * 🔮 **Demand Forecasting**: Generating synthetic data to model annual demand trends and predict future stock needs more accurately.
 * 🔁 **Replenishment Planning**: Creating SKU-level reorder plans that account for lead times, demand variability, and service level targets.
 * 🔍 **Key goal**: Demonstrate how data-driven inventory strategies can help businesses reduce stockouts, avoid overstocking, and improve fulfillment efficiency.
 
 ## 📝 Scripts
 
-  * ```inventory_optimization.py```: Analyzes stock levels, and highlights overstocked and understocked SKUs.
+  * ```inventory_optimization.py```: Analyzes stock levels and highlights overstocked and understocked SKUs.
   * ```demand_forecasting.py```: Generates synthetic demand data and forecasts future stock needs.
   * ```replenishment_plan.py```: Calculates reorder points (ROP) and recommended reorder quantities.
   * ```synthetic_data_generation.py```: Generates a year-long synthetic dataset to support demand forecasting and inventory analysis.
-  * ```bottleneck_analysis.py```: *(Planned)* Will analyze process bottlenecks causing supply delays.
-  * ```supplier_analysis.py```: *(Planned)* Will assess supplier performance and lead times.
+  * ```bottleneck_analysis.py```: Analyzes SKUs at highest risk of supply chain disruption based on demand and fulfillment variability.
+  * ```supplier_analysis.py```: Evaluates supplier performance by assessing variability and reliability of lead times across SKUs.
 
 ## 🌐 Dependencies
 
@@ -48,6 +54,7 @@ _Note: local dependencies for each script are specified in the script headers_
       * ```numpy```
       * ```matplotlib```
       * ```seaborn```
+      * ```statsmodels```
       * ```scikit-learn``` (for synthetic data generation and modeling)
 
     Install with pip
@@ -72,11 +79,10 @@ python inventory_optimization.py
 ```
 
 
-## 🔮 Future Plans
-
-  * 🔄 Complete bottleneck and supplier analysis
-  * 📈 Add dashboards using ```streamlit``` or ```plotly```
-  * 📦 Package into a reusable Python module
+## 🔮 Possible Extensions
+* Build interactive dashboards using Streamlit or Plotly
+* Integrate external supplier APIs to enrich lead time data
+* Apply clustering to segment SKUs by fulfillment behavior
 
 
 ## 🤝 Contribute
